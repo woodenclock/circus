@@ -20,6 +20,7 @@ public class Duck extends Bird {
         return 10;
     }
 
+    //name is from animal class, inherited, don't make it private
     public Duck(String name) {
         this.name = name;
     }
