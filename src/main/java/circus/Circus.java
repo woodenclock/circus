@@ -71,7 +71,7 @@ public class Circus {
         animalArrayList.sort(Animal.AnimalNameComparator);
         System.out.println("After sorting ...");
 
-
+        //Generics Cage Branch
         Elephant strongOne = new Elephant("StrongOne");
         animalArrayList.add(strongOne);
 
@@ -84,9 +84,14 @@ public class Circus {
         Cage<Parrot> parrotCage = new Cage<>();
         parrotCage.lockUp(parrot);
 
+        //ArrayList of cages but each cage is of different type
         ArrayList<Cage> cages = new ArrayList<>();
         cages.add(duckCage);
         cages.add(parrotCage);
+
+        Cage<Elephant> elephantCage = new Cage<>();
+        elephantCage.lockUp(strongOne);
+        cages.add(elephantCage);
 
         for(Cage c: cages) {
             c.release();
